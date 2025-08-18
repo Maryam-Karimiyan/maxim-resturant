@@ -1,0 +1,60 @@
+{
+    "coffee": [
+        {
+            "title": "ماکتیل",
+            "icon": "src/assets/mocktail.png",
+            "products": [
+                {
+                    "id": 1,
+                    "title": "مارگاریتا",
+                    "price": "159000 تومان",
+                    "image": "src/assets/margarita.jpeg"
+                },
+                {
+                    "id": 2,
+                    "title": "لیموناد",
+                    "price": "159000 تومان",
+                    "image": "src/assets/lemonade.jpeg"
+                },
+                {
+                    "id": 3,
+                    "title": "موهیتو",
+                    "price": "159000 تومان",
+                    "image": "src/assets/mohito.jpeg"
+                }
+            ]
+        },
+        {
+            "title": "اسموتی",
+            "icon": "src/assets/smooti.png"
+        },
+        {
+            "title": "عرقیجات",
+            "icon": "src/assets/herbal.png"
+        },
+        {
+            "title": "شیک",
+            "icon": "src/assets/shake.png"
+        },
+        {
+            "title": "کیک و دسر",
+            "icon": "src/assets/cake.png"
+        },
+        {
+            "title": "قهوه",
+            "icon": "src/assets/coffee.png"
+        },
+        {
+            "title": "دمنوش",
+            "icon": "src/assets/tea.png"
+        },
+        {
+            "title": "آب میوه طبیعی",
+            "icon": "src/assets/herbal.png"
+        },
+        {
+            "title": "نوشیدنی گرم",
+            "icon": "src/assets/tea.png"
+        }
+    ]
+}
