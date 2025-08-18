@@ -12,15 +12,22 @@ export function CardComponent({
   image,
   title,
   description,
-  buttonText = "Share",
+  buttonText,
   onButtonClick,
-  maxWidth = 500,
+  minWidth = "100%",
+  sx,
+  ...rest
 }) {
   return (
-    <Card sx={{ maxWidth }}>
+    <Card sx={{ minWidth, ...sx }} {...rest}>
       <CardActionArea>
         {image && (
-          <CardMedia component="img" image={image} alt={title} height="500vh" />
+          <CardMedia
+            component="img"
+            image={image}
+            alt={title}
+            maxheight="500vh"
+          />
         )}
         <CardContent
           sx={{
@@ -41,7 +48,13 @@ export function CardComponent({
             </Typography>
           )}
           {description && (
-            <Typography mt={4} variant="body2">{description}</Typography>
+            <Typography
+              sx={{ direction: "rtl", textAlign: "right" }}
+              mt={4}
+              variant="body2"
+            >
+              {description}
+            </Typography>
           )}
         </CardContent>
       </CardActionArea>
@@ -66,21 +79,5 @@ export function CardComponent({
         </CardActions>
       )}
     </Card>
-  );
-}
-
-export function CardsByData({ data }) {
-  return (
-    <Box>
-      {data.map((item) => {
-        <CardComponent
-          key={item.id}
-          image={item.image}
-          title={item.title}
-          description={item.price}
-          buttonText="افزودن سفارش"
-        />;
-      })}
-    </Box>
   );
 }

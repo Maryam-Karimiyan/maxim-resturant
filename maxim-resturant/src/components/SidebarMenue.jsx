@@ -1,4 +1,4 @@
-import { styled, useTheme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -7,12 +7,13 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 
-import { useState } from "react";
 import MaximLogo from "../assets/logo.png";
 import data from "../category.json";
 import ButtonComponent from "./ButtonComponet";
 import { useNavigate } from "react-router-dom";
-// const drawerWidth = 80;
+import { useSelector, useDispatch } from "react-redux";
+import { Container } from "@mui/material";
+import { changeIndex } from "../redux/menueSlice";
 const drawerWidth = "fit-content";
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -34,12 +35,6 @@ const closedMixin = (theme) => ({
     width: `calc(${theme.spacing(8)} + 1px)`,
   },
 });
-const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-end",
-  ...theme.mixins.toolbar,
-}));
 
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -67,12 +62,12 @@ const Drawer = styled(MuiDrawer, {
   ],
 }));
 
-export default function SidebarMenue({type}) {
-  const [selected, setSelected] = useState(null);
+export default function SidebarMenue({ type, children }) {
   const navigate = useNavigate();
- const items = data[type] || [];
- console.log(items);
- 
+  const items = data[type] || [];
+  const menuIndex = useSelector((state) => state.menueIndex.activeItem);
+  const dispatch = useDispatch();
+  
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -91,19 +86,21 @@ export default function SidebarMenue({type}) {
           {items.map((text, index) => (
             <ListItem key={index} disablePadding sx={{ display: "block" }}>
               <ButtonComponent
-                onClick={() => setSelected(index)}
+                onClick={() => {
+                  dispatch(changeIndex(index));
+                }}
                 sx={{
                   display: "flex",
                   flexDirection: "column",
                   flexWrap: "wrap",
                   width: "100%",
                   borderRight:
-                    selected === index ? "3px solid #5fbeb1" : "none",
+                    menuIndex === index ? "3px solid #5fbeb1" : "none",
                 }}
               >
                 <Box component="img" src={text.icon} sx={{ maxWidth: 50 }} />
                 <Typography fontSize={10} fontFamily="tahoma" color="#fff">
-                  {text.title}
+                  {text.name}
                 </Typography>
               </ButtonComponent>
             </ListItem>
@@ -122,7 +119,9 @@ export default function SidebarMenue({type}) {
           position="relative"
         />
         <ButtonComponent
-          onClick={() => navigate("/")}
+          onClick={() => {
+            dispatch(changeIndex(null))
+            navigate("/")}}
           sx={{
             fontSize: "1rem",
             fontFamily: "tahoma",
@@ -139,8 +138,19 @@ export default function SidebarMenue({type}) {
         </ButtonComponent>
 
         <Typography fontFamily="tahoma" color="#fff" variant="h5" mb={2}>
-          {selected !== null ? data.categories[selected].title : ""}
+          {menuIndex !== null ? data[type][menuIndex].name : ""}
         </Typography>
+        <Container
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            px:{md:"200px"}
+          }}
+        >
+          {children}
+        </Container>
       </Box>
     </Box>
   );

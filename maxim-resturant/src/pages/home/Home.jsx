@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import HomePoster from "../../components/HomePoster";
-import RestaurantMenue from "../../components/rest-menue";
+import RestaurantMenue from "../../components/RestMenueItems";
 import ButtonComponent from "../../components/ButtonComponet";
 import PriorityHighRoundedIcon from "@mui/icons-material/PriorityHighRounded";
 import { useState } from "react";

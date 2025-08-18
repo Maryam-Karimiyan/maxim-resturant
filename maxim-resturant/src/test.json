@@ -1,0 +1,123 @@
+{
+    "coffee": [
+        {
+            "id": "15845",
+            "name": "ماکتیل ",
+            "icon": "https://maxim.menusaz.com/Media_folder/2432/ico_2432_1697270463.png",
+            "items": [
+                {
+                    "id": "143823",
+                    "name": "مارگاریتا",
+                    "e_enable": "1",
+                    "has_off": false,
+                    "orig_price": "159000 تومان",
+                    "price": "159000 تومان",
+                    "price_number": "159000",
+                    "price_unit": "تومان",
+                    "description": "لیمو،اسپرایت،توت فرنگی،سیروپ توت فرنگی",
+                    "en_description": "",
+                    "icon": "",
+                    "image": "https://maxim.menusaz.com/Media_folder/2432/img_2432_1733258751.jpeg",
+                    "has_option": false,
+                    "vip": "0"
+                },
+                {
+                    "id": "90163",
+                    "name": "لیموناد",
+                    "e_enable": "1",
+                    "has_off": false,
+                    "orig_price": "159000 تومان",
+                    "price": "159000 تومان",
+                    "price_number": "159000",
+                    "price_unit": "تومان",
+                    "description": "لیمو تازه، سیروپ لیمو،لیموناد یا سودا",
+                    "en_description": "",
+                    "icon": "",
+                    "image": "https://maxim.menusaz.com/Media_folder/2432/img_2432_1697026571.jpg",
+                    "has_option": false,
+                    "vip": "0"
+                },
+                {
+                    "id": "90164",
+                    "name": "موهیتو ",
+                    "e_enable": "1",
+                    "has_off": false,
+                    "orig_price": "159000 تومان",
+                    "price": "159000 تومان",
+                    "price_number": "159000",
+                    "price_unit": "تومان",
+                    "description": "لیمو تازه،نعنا تازه،سیروپ لیمو،لیموناد یا سودا (فراست شده)",
+                    "en_description": "",
+                    "icon": "",
+                    "image": "https://maxim.menusaz.com/Media_folder/2432/img_2432_1697093710.jpg",
+                    "has_option": false,
+                    "vip": "0"
+                },
+                {
+                    "id": "97564",
+                    "name": "موهیتو",
+                    "e_enable": "1",
+                    "has_off": false,
+                    "orig_price": "159000 تومان",
+                    "price": "159000 تومان",
+                    "price_number": "159000",
+                    "price_unit": "تومان",
+                    "description": "لیمو تازه،نعنا تازه،سیروپ لیمو،لیموناد یا سودا",
+                    "en_description": "",
+                    "icon": "",
+                    "image": "https://maxim.menusaz.com/Media_folder/2432/img_2432_1697439586.jpg",
+                    "has_option": false,
+                    "vip": "0"
+                },
+                {
+                    "id": "90166",
+                    "name": "جینجر موهیتو ",
+                    "e_enable": "1",
+                    "has_off": false,
+                    "orig_price": "159000 تومان",
+                    "price": "159000 تومان",
+                    "price_number": "159000",
+                    "price_unit": "تومان",
+                    "description": "لیمو تازه،زنجبیل،پنیرک،لیموناد یا سودا",
+                    "en_description": "",
+                    "icon": "",
+                    "image": "https://maxim.menusaz.com/Media_folder/2432/img_2432_1697032248.jpg",
+                    "has_option": false,
+                    "vip": "0"
+                },
+                {
+                    "id": "90165",
+                    "name": "رد موهیتو ",
+                    "e_enable": "1",
+                    "has_off": false,
+                    "orig_price": "159000 تومان",
+                    "price": "159000 تومان",
+                    "price_number": "159000",
+                    "price_unit": "تومان",
+                    "description": "لیمو تازه،نعنا تازه،سیروب توت فرنگی،لیموناد یا سودا",
+                    "en_description": "",
+                    "icon": "",
+                    "image": "https://maxim.menusaz.com/Media_folder/2432/img_2432_1697032308.jpg",
+                    "has_option": false,
+                    "vip": "0"
+                },
+                {
+                    "id": "90167",
+                    "name": "کوکونات موهیتو ",
+                    "e_enable": "1",
+                    "has_off": false,
+                    "orig_price": "159000 تومان",
+                    "price": "159000 تومان",
+                    "price_number": "159000",
+                    "price_unit": "تومان",
+                    "description": "لیمو تازه،نعنا تازه،سیروب کوکونات،لیموناد یا سودا",
+                    "en_description": "",
+                    "icon": "",
+                    "image": "https://maxim.menusaz.com/Media_folder/2432/img_2432_1697435580.jpg",
+                    "has_option": false,
+                    "vip": "0"
+                }
+            ]
+        }
+    ]
+}

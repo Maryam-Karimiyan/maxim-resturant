@@ -22,8 +22,8 @@ function RestaurantMenue() {
       <ButtonGroup
         orientation={"horizontal"}
         display="flex"
-        flexWrap="wrap"
-        justifyContent="center"
+        flexwrap="wrap"
+        justifycontent="center"
         sx={{
           flexDirection: { xs: "column", sm: "column", md: "row" },
           "& .MuiButtonGroup-grouped": {

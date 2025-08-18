@@ -2,8 +2,8 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { CssBaseline } from "@mui/material";
-
+import { store } from "./redux/store.js";
+import { Provider } from "react-redux";
 const theme = createTheme({
   direction: "rtl", // برای راست‌چین (مناسب فارسی)
   typography: {
@@ -22,6 +22,8 @@ const theme = createTheme({
 createRoot(document.getElementById("root")).render(
   <ThemeProvider theme={theme}>
     {/* <CssBaseline/> */}
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </ThemeProvider>
 );
