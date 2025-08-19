@@ -44,7 +44,6 @@ function OrderDetail() {
             right: 0,
             color: "#ffff",
             backgroundColor: "#010101",
-            borderRadius: "20px",
             borderRadius: "25px 0 0 25px",
             position: "absolute",
           }}
