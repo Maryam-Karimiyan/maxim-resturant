@@ -89,7 +89,7 @@ function CartDialog({ open, onClose }) {
                 <CardMedia
                   component="img"
                   sx={{
-                    width: 130,
+                    maxWidth: 130,
                     objectFit: "cover",
                     m: 1,
                     borderRadius: "5px",
@@ -104,7 +104,7 @@ function CartDialog({ open, onClose }) {
                     pr: 2,
                   }}
                 >
-                  <Typography component="div" variant="h6">
+                  <Typography component="div" variant={{lg:"h6",xs:"subtitle1"}}>
                     {item.name}
                   </Typography>
                   <Typography

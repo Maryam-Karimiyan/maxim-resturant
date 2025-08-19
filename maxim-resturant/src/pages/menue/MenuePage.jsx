@@ -15,7 +15,7 @@ function MenuePage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const subMenueItems = index!=null ? data[type][index]["items"] : [];
+  const subMenueItems = index != null ? data[type][index]["items"] : [];
 
   const subMenue = (
     <Box>
@@ -28,7 +28,8 @@ function MenuePage() {
           buttonText="افزودن سفارش"
           sx={{ mt: 2 }}
           onButtonClick={() => dispatch(addToCart(item))}
-          onClick={()=>navigate(`/order/${type}/${item.id}`)}
+          onClick={() => navigate(`/order/${type}/${item.id}`)}
+          
         />
       ))}
       {index != null ? (

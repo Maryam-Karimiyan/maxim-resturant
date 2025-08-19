@@ -18,7 +18,7 @@ function RestaurantMenue() {
     </ButtonComponent>,
   ];
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+    <Box sx={{ display: "flex", justifyContent: "center",alignContent:"center"}}>
       <ButtonGroup
         orientation={"horizontal"}
         display="flex"
@@ -29,13 +29,14 @@ function RestaurantMenue() {
           "& .MuiButtonGroup-grouped": {
             border: "none",
             padding: 0,
-            m: "auto 50px",
+            // m: "10px 50px",
             transition: "transform 0.2s ease",
             "&:hover": {
               transform: "scale(1.3)",
               background: "none",
             },
           },
+          gap:4
         }}
       >
         {buttons}

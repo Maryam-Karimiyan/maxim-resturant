@@ -11,7 +11,7 @@ function OrderDetail() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const index = useSelector((state) => state.menueIndex.activeItem);
-  const subItem = index
+  const subItem = index !==null
     ? data[type][index]["items"].find((i) => i.id == id)
     : {};
 
@@ -21,15 +21,17 @@ function OrderDetail() {
       disableGutters
       sx={{
         width: "100%",
+        height:"100vh",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#FFF",
-        padding: "80px",
+        padding: {sm:"1px",xs:"10px"},
+        m:0
       }}
     >
-      <Box sx={{ width: "100%", maxWidth: 500, p: { xs: 2, sm: 5 } }}>
+      <Box sx={{ width: "100%", maxWidth: 350, p: { xs: 2, sm: 5 } }}>
         {/* return btn */}
         <ButtonComponent
           onClick={() => {
@@ -53,15 +55,15 @@ function OrderDetail() {
           <Typography fontWeight="bold" variant="h6">
             {subItem.name}
           </Typography>
-          <Typography fontWeight="bold">{subItem.price}</Typography>
+          <Typography  variant="subtitle2">{subItem.price}</Typography>
         </Stack>
         <Box
-          sx={{ width: "100%", height: "auto", mt: 5 }}
+          sx={{ width: "100%", mt: 5 }}
           component="img"
           src={subItem.image}
         />
-        <Box textAlign="right" mt={3} width="100%">
-          <Typography variant="p">{subItem.description}</Typography>
+        <Box textAlign="right"  width="100%">
+          <Typography variant="overline">{subItem.description}</Typography>
         </Box>
         {/* add to cart btn */}
         <ButtonComponent
@@ -75,7 +77,7 @@ function OrderDetail() {
             borderRadius: "10px",
             backgroundColor: "#f1f1f1",
             width: "100%",
-            mt: 3,
+            mt: 1,
           }}
         >
           افزودن به سفارش

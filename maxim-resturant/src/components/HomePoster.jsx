@@ -6,7 +6,7 @@ function HomePoster() {
     <Box>
       <CarouselImages />
       <Box
-        width={300}
+        width={240}
         component="img"
         src={MaximLogo}
         marginTop={-6}

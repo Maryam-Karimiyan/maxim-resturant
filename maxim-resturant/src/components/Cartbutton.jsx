@@ -43,7 +43,7 @@ function Cartbutton() {
                 },
               }}
             />
-            <Typography color="#000" variant="p">
+            <Typography color="#000" variant="overline">
               مشاهده دفترچه یادداشت{" "}
             </Typography>
           </Toolbar>

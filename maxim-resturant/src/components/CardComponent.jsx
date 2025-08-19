@@ -5,8 +5,7 @@ import Typography from "@mui/material/Typography";
 import ButtonComponent from "./ButtonComponet";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardActions from "@mui/material/CardActions";
-import { Box, colors, Divider } from "@mui/material";
-import { Padding } from "@mui/icons-material";
+import { Divider } from "@mui/material";
 
 export function CardComponent({
   image,
@@ -23,11 +22,10 @@ export function CardComponent({
       <CardActionArea>
         {image && (
           <CardMedia
+            sx={{ height: { xs: "10rem", md: "45rem" } }}
             component="img"
             image={image}
             alt={title}
-            maxheight="500vh"
-            
           />
         )}
         <CardContent
@@ -35,14 +33,14 @@ export function CardComponent({
             textAlign: "end",
             backgroundColor: "#010101",
             color: "#fff",
-            mt: "-10px",
+            // mt: "-10px",
           }}
         >
           {title && (
             <Typography
               fontFamily="tahoma"
               gutterBottom
-              variant="h5"
+              variant={{ xs: "subtitle1", md: "h5" }}
               component="div"
             >
               {title}
