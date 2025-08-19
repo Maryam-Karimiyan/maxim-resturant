@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/home";
-import MenuePage from "./pages/menue/menuePage";
+import Home from "./pages/home/Home";
+import MenuePage from "./pages/menue/MenuePage";
 import OrderDetail from "./pages/orderfoodDetail/OrderFoodDetail";
 import Cartbutton from "./components/Cartbutton";
 
