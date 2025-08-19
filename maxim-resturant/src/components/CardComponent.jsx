@@ -27,6 +27,7 @@ export function CardComponent({
             image={image}
             alt={title}
             maxheight="500vh"
+            
           />
         )}
         <CardContent

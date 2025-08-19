@@ -7,6 +7,7 @@ import ButtonComponent from "../../components/ButtonComponet";
 import { Box } from "@mui/material";
 import { changeIndex } from "../../redux/menueSlice";
 import { useNavigate } from "react-router-dom";
+import { addToCart } from "../../redux/cartSlice";
 
 function MenuePage() {
   const index = useSelector((state) => state.menueIndex.activeItem);
@@ -14,7 +15,7 @@ function MenuePage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const subMenueItems = index ? data[type][index]["items"] : [];
+  const subMenueItems = index!=null ? data[type][index]["items"] : [];
 
   const subMenue = (
     <Box>
@@ -26,6 +27,7 @@ function MenuePage() {
           description={item.price}
           buttonText="افزودن سفارش"
           sx={{ mt: 2 }}
+          onButtonClick={() => dispatch(addToCart(item))}
           onClick={()=>navigate(`/order/${type}/${item.id}`)}
         />
       ))}

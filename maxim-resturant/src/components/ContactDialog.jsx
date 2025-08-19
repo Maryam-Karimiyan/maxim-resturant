@@ -3,11 +3,12 @@ import DialogComponent from "./DialoComponent";
 import instagramImg from "../assets/instagram.png";
 import phoneImg from "../assets/phone.png";
 import mapaddressImg from "../assets/mapaddress.png";
+import CloseIcon from "@mui/icons-material/Close";
 
 function ContactDialog({ open, onClose }) {
   return (
     <>
-      <DialogComponent open={open} onClose={onClose}>
+      <DialogComponent CloseIcon={<CloseIcon sx={{ color: "#f1f1f1" }} />} open={open} onClose={onClose}>
         <Box>
           <Box
             sx={{

@@ -4,7 +4,6 @@ import RestaurantMenue from "../../components/RestMenueItems";
 import ButtonComponent from "../../components/ButtonComponet";
 import PriorityHighRoundedIcon from "@mui/icons-material/PriorityHighRounded";
 import { useState } from "react";
-import DialogComponent from "../../components/DialoComponent";
 import ContactDialog from "../../components/ContactDialog";
 export default function Home() {
   const [open, setOpen] = useState(false);

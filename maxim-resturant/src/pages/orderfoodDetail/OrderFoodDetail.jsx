@@ -4,12 +4,12 @@ import data from "../../category.json";
 import { useSelector } from "react-redux";
 import ButtonComponent from "../../components/ButtonComponet";
 import { useNavigate } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartSlice";
 function OrderDetail() {
   const { type, id } = useParams();
-  console.log(type, id);
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
   const index = useSelector((state) => state.menueIndex.activeItem);
   const subItem = index
     ? data[type][index]["items"].find((i) => i.id == id)
@@ -21,7 +21,6 @@ function OrderDetail() {
       disableGutters
       sx={{
         width: "100%",
-        height: "100%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -30,7 +29,8 @@ function OrderDetail() {
         padding: "80px",
       }}
     >
-      <Box>
+      <Box sx={{ width: "100%", maxWidth: 500, p: { xs: 2, sm: 5 } }}>
+        {/* return btn */}
         <ButtonComponent
           onClick={() => {
             navigate(-1);
@@ -56,15 +56,20 @@ function OrderDetail() {
           <Typography fontWeight="bold">{subItem.price}</Typography>
         </Stack>
         <Box
-          sx={{ maxWidth: "500px", mt: 5 }}
+          sx={{ width: "100%", height: "auto", mt: 5 }}
           component="img"
           src={subItem.image}
         />
         <Box textAlign="right" mt={3} width="100%">
           <Typography variant="p">{subItem.description}</Typography>
         </Box>
-
+        {/* add to cart btn */}
         <ButtonComponent
+          onClick={() =>
+            dispatch(
+              addToCart({ ...subItem, quantity: (subItem.quantity || 0) + 1 })
+            )
+          }
           sx={{
             color: "#000",
             borderRadius: "10px",
