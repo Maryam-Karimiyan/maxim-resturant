@@ -13,6 +13,7 @@ export function CardComponent({
   description,
   buttonText,
   onButtonClick,
+  onImgClick,
   minWidth = "100%",
   sx,
   ...rest
@@ -26,6 +27,7 @@ export function CardComponent({
             component="img"
             image={image}
             alt={title}
+            onClick={onImgClick}
           />
         )}
         <CardContent
@@ -33,7 +35,6 @@ export function CardComponent({
             textAlign: "end",
             backgroundColor: "#010101",
             color: "#fff",
-            // mt: "-10px",
           }}
         >
           {title && (
