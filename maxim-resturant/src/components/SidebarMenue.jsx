@@ -67,7 +67,7 @@ export default function SidebarMenue({ type, children }) {
   const items = data[type] || [];
   const menuIndex = useSelector((state) => state.menueIndex.activeItem);
   const dispatch = useDispatch();
-  
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -120,8 +120,10 @@ export default function SidebarMenue({ type, children }) {
         />
         <ButtonComponent
           onClick={() => {
-            dispatch(changeIndex(null))
-            navigate("/")}}
+            dispatch(changeIndex(null));
+            navigate("/");
+            localStorage.removeItem("menuIndex"); // پاک کنه که آیتمی فعال نمونه
+          }}
           sx={{
             fontSize: "1rem",
             fontFamily: "tahoma",
@@ -146,7 +148,7 @@ export default function SidebarMenue({ type, children }) {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            px:{md:"200px"}
+            px: { md: "200px" },
           }}
         >
           {children}

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  activeItem: null,
+   activeItem: JSON.parse(localStorage.getItem("menuIndex")) ?? null,
 };
 
 export const menueSlice = createSlice({
@@ -10,6 +10,8 @@ export const menueSlice = createSlice({
   reducers: {
     changeIndex: (state, action) => {
       state.activeItem= action.payload;
+      // ذخیره در localStorage برای اینکه بعد رفرش هم بمونه
+      localStorage.setItem("menuIndex", JSON.stringify(action.payload));
     },
   },
 });
