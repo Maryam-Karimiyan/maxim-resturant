@@ -25,10 +25,10 @@ const cartSlice = createSlice({
         existing.quantity -= 1;
       } else {
         newState = state.filter((i) => i.id !== item.id);
+        // ذخیره در localStorage
+        localStorage.setItem("cart", JSON.stringify(newState));
+        return newState;
       }
-      // ذخیره در localStorage
-      localStorage.setItem("cart", JSON.stringify(newState));
-      return newState;
     },
     clearCart: () => {
       localStorage.removeItem("cart"); // پاک کردن
