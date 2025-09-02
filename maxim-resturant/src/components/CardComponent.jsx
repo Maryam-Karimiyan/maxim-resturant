@@ -33,13 +33,12 @@ export function CardComponent({
         <CardContent
           sx={{
             textAlign: "end",
-            backgroundColor: "#010101",
-            color: "#fff",
+            backgroundColor: "primary.main",
+            color: "primary.contrastText",
           }}
         >
           {title && (
             <Typography
-              fontFamily="tahoma"
               gutterBottom
               variant={{ xs: "subtitle1", md: "h5" }}
               component="div"
@@ -63,13 +62,12 @@ export function CardComponent({
         <CardActions sx={{ p: 0, justifyContent: "center" }}>
           <ButtonComponent
             sx={{
-              color: "#fff",
-              backgroundColor: "#010101",
+              color: "primary.contrastText",
+              backgroundColor: "primary.main",
               borderRadius: 0,
               p: "10px",
               width: "100%",
               fontWeight: "700",
-              fontFamily: "tahoma",
             }}
             size="small"
             onClick={onButtonClick}

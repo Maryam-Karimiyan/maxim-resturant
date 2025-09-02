@@ -14,7 +14,7 @@ function ScreenshotBtn() {
     <ButtonComponent
       onClick={takeScreenshot}
       sx={{
-        color: "#000000",
+        color: "primary.main",
       }}
     >
       📸  اسکرین‌شات

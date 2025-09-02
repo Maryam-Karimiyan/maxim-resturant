@@ -39,7 +39,6 @@ function OrderDetail() {
           }}
           sx={{
             fontSize: "1rem",
-            fontFamily: "tahoma",
             top: "30px",
             right: 0,
             color: "#ffff",

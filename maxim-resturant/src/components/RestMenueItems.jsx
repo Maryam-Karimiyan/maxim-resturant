@@ -29,7 +29,6 @@ function RestaurantMenue() {
           "& .MuiButtonGroup-grouped": {
             border: "none",
             padding: 0,
-            // m: "10px 50px",
             transition: "transform 0.2s ease",
             "&:hover": {
               transform: "scale(1.3)",

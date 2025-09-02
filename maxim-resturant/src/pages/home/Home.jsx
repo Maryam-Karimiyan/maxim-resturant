@@ -23,7 +23,6 @@ export default function Home() {
       <ButtonComponent
         sx={{
           fontSize: "1rem",
-          fontFamily: "tahoma",
           bottom: "-50px",
           left: 0,
           color: "#000",
