@@ -15,7 +15,7 @@ function Cartbutton() {
           sx={{
             top: "auto",
             bottom: 0,
-            backgroundColor: "#fff",
+            backgroundColor: "primary.contrastText",
             maxHeight: 40,
             cursor: "pointer",
           }}
@@ -37,13 +37,13 @@ function Cartbutton() {
               sx={{
                 mr: 3,
                 "& .MuiBadge-badge": {
-                  backgroundColor: "#f1f1f1",
-                  color: "#000",
+                  backgroundColor: "secondary.contrastText",
+                  color: "primary.main",
                   fontSize: "0.7rem",
                 },
               }}
             />
-            <Typography color="#000" variant="overline">
+            <Typography color="primary.main" variant="overline">
               مشاهده دفترچه یادداشت{" "}
             </Typography>
           </Toolbar>

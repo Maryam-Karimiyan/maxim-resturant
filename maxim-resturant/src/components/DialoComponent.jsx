@@ -17,7 +17,7 @@ export default function DialogComponent({
   children,
   transitionMove = "right",
   CloseIcon,
-  bgcolor="#64625a"
+  bgcolor="info.main"
 }) {
   return (
     <React.Fragment>

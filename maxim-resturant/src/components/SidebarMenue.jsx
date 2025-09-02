@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Container } from "@mui/material";
 import { changeIndex } from "../redux/menueSlice";
+import { useTheme } from "@mui/material/styles";
 const drawerWidth = "fit-content";
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -64,6 +65,7 @@ const Drawer = styled(MuiDrawer, {
 
 export default function SidebarMenue({ type, children }) {
   const navigate = useNavigate();
+  const theme = useTheme();
   const items = data[type] || [];
   const menuIndex = useSelector((state) => state.menueIndex.activeItem);
   const dispatch = useDispatch();
@@ -75,7 +77,7 @@ export default function SidebarMenue({ type, children }) {
         variant="permanent"
         sx={{
           "& .MuiDrawer-paper": {
-            backgroundColor: "#010101",
+            backgroundColor: "primary.main",
             width: drawerWidth,
             direction: "rtl",
           },
@@ -95,11 +97,13 @@ export default function SidebarMenue({ type, children }) {
                   flexWrap: "wrap",
                   width: "100%",
                   borderRight:
-                    menuIndex === index ? "3px solid #5fbeb1" : "none",
+                    menuIndex === index
+                      ? `3px solid ${theme.palette.info.contrastText}`
+                      : "none",
                 }}
               >
                 <Box component="img" src={text.icon} sx={{ maxWidth: 50 }} />
-                <Typography fontSize={10} fontFamily="tahoma" color="#fff">
+                <Typography fontSize={10} color="primary.contrastText">
                   {text.name}
                 </Typography>
               </ButtonComponent>
@@ -109,7 +113,7 @@ export default function SidebarMenue({ type, children }) {
       </Drawer>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, backgroundColor: "#242e30" }}
+        sx={{ flexGrow: 1, p: 3, backgroundColor: "primary.menu" }}
       >
         <Box
           width={100}
@@ -126,11 +130,10 @@ export default function SidebarMenue({ type, children }) {
           }}
           sx={{
             fontSize: "1rem",
-            fontFamily: "tahoma",
             top: "30px",
             right: 0,
-            color: "#ffff",
-            backgroundColor: "#010101",
+            color: "primary.contrastText",
+            backgroundColor: "primary.main",
             borderRadius: "20px",
             borderRadius: "25px 0 0 25px",
             position: "absolute",
@@ -139,7 +142,7 @@ export default function SidebarMenue({ type, children }) {
           بازگشت
         </ButtonComponent>
 
-        <Typography fontFamily="tahoma" color="#fff" variant="h5" mb={2}>
+        <Typography color="primary.contrastText" variant="h5" mb={2}>
           {menuIndex !== null ? data[type][menuIndex].name : ""}
         </Typography>
         <Container

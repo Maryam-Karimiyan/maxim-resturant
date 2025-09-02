@@ -30,8 +30,8 @@ function CartDialog({ open, onClose }) {
   return (
     <>
       <DialogComponent
-        bgcolor="#fff"
-        CloseIcon={<CloseIcon sx={{ color: "#272727" }} />}
+        bgcolor="primary.contrastText"
+        CloseIcon={<CloseIcon sx={{ color: "secondary.main" }} />}
         open={open}
         onClose={onClose}
         transitionMove="up"
@@ -50,7 +50,8 @@ function CartDialog({ open, onClose }) {
                 alignItems: "center",
                 justifyContent: "space-between",
                 margin: "10px auto",
-                border: "1px dashed #272727",
+                border: "1px dashed",
+                borderBlockColor: "secondary.main",
               }}
             >
               {/* Left side: Quantity controls */}
@@ -104,7 +105,10 @@ function CartDialog({ open, onClose }) {
                     pr: 2,
                   }}
                 >
-                  <Typography component="div" variant={{lg:"h6",xs:"subtitle1"}}>
+                  <Typography
+                    component="div"
+                    variant={{ lg: "h6", xs: "subtitle1" }}
+                  >
                     {item.name}
                   </Typography>
                   <Typography
@@ -122,8 +126,8 @@ function CartDialog({ open, onClose }) {
             <ButtonComponent
               sx={{
                 width: "100%",
-                bgcolor: "#000000",
-                color: "#fff",
+                bgcolor: "primary.main",
+                color: "primary.contrastText",
                 borderRadius: "10px",
               }}
             >

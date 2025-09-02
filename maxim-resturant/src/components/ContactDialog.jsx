@@ -2,11 +2,9 @@ import {
   Box,
   Card,
   CardContent,
-  CardMedia,
   Typography,
   Link,
 } from "@mui/material";
-// import { Link } from "react-router-dom";
 import DialogComponent from "./DialoComponent";
 import instagramImg from "../assets/instagram.png";
 import phoneImg from "../assets/phone.png";
@@ -30,7 +28,7 @@ function ContactDialog({ open, onClose }) {
   return (
     <>
       <DialogComponent
-        CloseIcon={<CloseIcon sx={{ color: "#f1f1f1" }} />}
+        CloseIcon={<CloseIcon sx={{ color: "secondary.contrastText" }} />}
         open={open}
         onClose={onClose}
       >
@@ -78,7 +76,7 @@ function ContactDialog({ open, onClose }) {
             paddingY={2}
             component="p"
             borderRadius="10px"
-            backgroundColor="#ffffff"
+            backgroundColor="primary.contrastText"
             ml="auto"
           >
             <Typography variant="overline">
